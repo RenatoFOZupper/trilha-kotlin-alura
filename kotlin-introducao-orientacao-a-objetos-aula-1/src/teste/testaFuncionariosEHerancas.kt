@@ -1,3 +1,5 @@
+import modelo.*
+
 fun testaFuncionariosEHerancas() {
     val claudio: Funcionario = Analista(nome = "Claudio", cpf = "111.111.111-11", salario = 1000.0)
 
@@ -42,7 +44,7 @@ fun testaFuncionariosEHerancas() {
     calculadora.registra(gui)
     calculadora.registra(maria)
 
-    println("Total de bonificação: ${calculadora.total}")
+    println("Soma de bonificação de todos funcionarios: ${calculadora.total}")
 
     println()
 }

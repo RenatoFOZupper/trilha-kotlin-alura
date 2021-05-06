@@ -1,7 +1,9 @@
+package modelo
+
 class ContaPoupanca(
     titular: String,
     numero: Int
-) : Conta(
+) : ContaTransferivel(
     titular = titular,
     numero = numero
 ) {
@@ -16,9 +18,6 @@ class ContaPoupanca(
         super.deposita(valor)
     }
 
-    override fun transfere(contaDestino: Conta, valor: Double): Boolean {
-        return super.transfere(contaDestino, valor)
-    }
 
 
 

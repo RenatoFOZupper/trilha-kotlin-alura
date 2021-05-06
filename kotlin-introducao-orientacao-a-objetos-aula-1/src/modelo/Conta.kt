@@ -1,4 +1,4 @@
-//  Construtor primário - mais idiomatico ao padrão Kotlin
+package modelo//  Construtor primário - mais idiomatico ao padrão Kotlin
 
 abstract class Conta(
     var titular: String,
@@ -9,7 +9,7 @@ abstract class Conta(
 
 //  O init executa alguma lógica no momento em que é chamado o construtor primário e ele é opcional
     init {
-    println("Nova Conta: $numero titular: $titular")
+    println("Nova modelo.Conta: $numero titular: $titular")
     }
 
     /*   Constutor secundário = geralmente usado para alguma logica especifica
@@ -36,19 +36,10 @@ abstract class Conta(
         }
     }
 
-
-
     abstract fun saca(valor: Double)
 
 
-    open fun transfere(contaDestino: Conta, valor: Double): Boolean {
-        if (saldo >= valor) {
-            saldo -= valor
-            contaDestino.deposita(valor)
-            return true
-        }
-        return false
-    }
+
 
 //    fun getSaldo(): Double {
 //        return saldo

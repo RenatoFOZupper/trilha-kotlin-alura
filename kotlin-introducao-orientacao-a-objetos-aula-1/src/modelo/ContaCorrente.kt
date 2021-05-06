@@ -1,7 +1,9 @@
+package modelo
+
 class ContaCorrente(
     titular: String,
     numero: Int
-) : Conta(
+) : ContaTransferivel(
     titular = titular,
     numero = numero
 ) {
@@ -17,8 +19,5 @@ class ContaCorrente(
         super.deposita(valor)
     }
 
-    override fun transfere(contaDestino: Conta, valor: Double): Boolean {
-        return super.transfere(contaDestino, valor)
-    }
 
 }
