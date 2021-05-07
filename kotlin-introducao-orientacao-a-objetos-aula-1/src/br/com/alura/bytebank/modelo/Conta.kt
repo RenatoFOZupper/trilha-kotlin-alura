@@ -1,7 +1,7 @@
-package modelo//  Construtor primário - mais idiomatico ao padrão Kotlin
+package br.com.alura.bytebank.modelo
 
-abstract class Conta(
-    var titular: String,
+abstract class Conta(             //  Construtor primário - mais idiomatico ao padrão Kotlin
+    var titular: Cliente,
     val numero: Int
 ) {
     var saldo: Double = 0.0
@@ -9,7 +9,7 @@ abstract class Conta(
 
 //  O init executa alguma lógica no momento em que é chamado o construtor primário e ele é opcional
     init {
-    println("Nova modelo.Conta: $numero titular: $titular")
+    println("Nova br.com.alura.bytebank.modelo.Conta: $numero titular: $titular")
     }
 
     /*   Constutor secundário = geralmente usado para alguma logica especifica

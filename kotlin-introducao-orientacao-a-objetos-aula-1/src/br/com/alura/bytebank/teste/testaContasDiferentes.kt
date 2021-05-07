@@ -1,11 +1,17 @@
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
-import modelo.ContaSalario
+import br.com.alura.bytebank.modelo.*
 
 fun testaContasDiferentes() {
-    var corrente = ContaCorrente(titular = "Alex", numero = 1000)
-    var poupanca = ContaPoupanca(titular = "Maria", numero = 1001)
-    var salario = ContaSalario(titular = "Joao", numero = 1003)
+    val alex:Cliente = Cliente("Alex", "111.111.111-11", 12345)
+    val maria:Cliente = Cliente("Maria", "444.444.444-44", 12345)
+
+
+    var corrente = ContaCorrente(titular = alex, numero = 1000)
+    var poupanca = ContaPoupanca(titular = maria, numero = 1001)
+    var salario = ContaSalario(Cliente(
+        nome = "Joao",
+        cpf = "333.333.333-33",
+        senha = 12345
+    ), numero = 1003)
     println()
 
     corrente.deposita(1000.0)

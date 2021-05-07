@@ -1,22 +1,25 @@
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
+import br.com.alura.bytebank.modelo.*
 
 fun testaCompartamentosConta() {
-    val contaAlex = ContaCorrente("Alex", 1000)
+    val alex: Cliente = Cliente("ALex", "111.111.111-11", 12345)
+
+    val contaAlex = ContaCorrente(alex, 1000)
     contaAlex.deposita(200.0)
 
-    println("Titular da conta: ${contaAlex.titular}")
+    println("Titular da conta: ${contaAlex.titular.nome}")
     println("Numero da conta:  ${contaAlex.numero}")
     println("Saldo da conta: ${contaAlex.saldo}")
     println()
 
 
+    val fran: Cliente = Cliente("Fran", "222.222.222-22", 12345)
+
     // na chamada deste construtor fazemos uso do 'label', que é indicar o campo que está recebendo aquele valor
     // a vantagem dessa abordagem permite a atribuição do campos em qualquer ordem dentro do construtor
-    val contaFran = ContaPoupanca(numero = 1001, titular = "Fran")
+    val contaFran = ContaPoupanca(numero = 1001, titular = fran)
     contaFran.deposita(300.0)
 
-    println("Titular da conta: ${contaFran.titular}")
+    println("Titular da conta: ${contaFran.titular.nome}")
     println("Numero da conta:  ${contaFran.numero}")
     println("Saldo da conta: ${contaFran.saldo}")
     println()

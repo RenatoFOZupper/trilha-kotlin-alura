@@ -1,4 +1,4 @@
-import modelo.*
+import br.com.alura.bytebank.modelo.*
 
 fun testaFuncionariosEHerancas() {
     val claudio: Funcionario = Analista(nome = "Claudio", cpf = "111.111.111-11", salario = 1000.0)

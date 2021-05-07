@@ -1,7 +1,7 @@
-package modelo
+package br.com.alura.bytebank.modelo
 
-class ContaCorrente(
-    titular: String,
+class ContaPoupanca(
+    titular: Cliente,
     numero: Int
 ) : ContaTransferivel(
     titular = titular,
@@ -9,15 +9,17 @@ class ContaCorrente(
 ) {
 
     override fun saca(valor: Double) {
-        val valorComTaxa: Double = valor + 0.1
-        if (this.saldo >= valorComTaxa) {
-            this.saldo -= valorComTaxa
+        if (this.saldo >= valor) {
+            this.saldo -= valor
         }
     }
 
     override fun deposita(valor: Double) {
         super.deposita(valor)
     }
+
+
+
 
 
 }
