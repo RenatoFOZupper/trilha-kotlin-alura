@@ -8,6 +8,18 @@ class CalculadoraBonificacao {
     fun registra(funcionario: Funcionario) {
         println("Nome: ${funcionario.nome}")
         this.total += funcionario.bonificacao()
+
+      /*                         Cast
+     val novoFuncionario: Funcionario = funcionario as Funcionario
+
+
+              Smart Cast - Verifica o tipo e depois faz o cast
+        if (funcionario is Funcionario) {
+            println("Nome: ${funcionario.nome}")
+            this.total += funcionario.bonificacao()
+        }
+        */
+
     }
 
 //    fun registra(gerente: br.com.alura.bytebank.modelo.Gerente) {
