@@ -1,3 +1,5 @@
+import br.com.alura.bytebank.exception.FalhaAutenticacaoException
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
 import br.com.alura.bytebank.modelo.*
 
 fun testaCompartamentosConta() {
@@ -67,12 +69,35 @@ fun testaCompartamentosConta() {
     println()
 
     println("Transferência da conta da Fran para o Alex")
-    if (contaFran.transfere(contaDestino = contaAlex, valor = 100.0)) {
+    try {
+        contaFran.transfere(contaDestino = contaAlex, valor = 100.0, senha = 12345)
         println("Transferência sucedida")
-    } else {
+    } catch (e: SaldoInsuficienteException) {
         println("Falha na transferência")
+        e.printStackTrace()
     }
 
     println("Saldo da conta do Alex: ${contaAlex.saldo}")
     println("Sado da conta da Fran: ${contaFran.saldo}")
+
+    println("Transferência da conta do Alex para Fran")
+    try {
+        contaAlex.transfere(contaDestino = contaFran, valor = 249.0, senha = 1234)
+        println("Transferência sucedida")
+    } catch (e: SaldoInsuficienteException) {
+        println("Falha na transferência")
+        println("Saldo insuficiente")
+        e.printStackTrace()
+    } catch (e: FalhaAutenticacaoException) {
+        println("Falha na transferência")
+        println("Falha na autenticação")
+        e.printStackTrace()
+    } catch (e: Exception) {
+        println("Erro desconhecido")
+        e.printStackTrace()
 }
+
+    println("Saldo da conta do Alex: ${contaAlex.saldo}")
+    println("Sado da conta da Fran: ${contaFran.saldo}")
+}
+

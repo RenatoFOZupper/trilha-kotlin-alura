@@ -4,7 +4,8 @@ package br.com.alura.bytebank.modelo
 abstract class Conta(
     var titular: Cliente,
     val numero: Int
-) {
+) : Autenticavel {
+// ): Autenticavel by titular{  -> delegação de propriedade: dessa forma ñ precisamos sobreescrever o método autentica
     var saldo: Double = 0.0
         protected set
 
@@ -53,6 +54,10 @@ abstract class Conta(
     }
 
     abstract fun saca(valor: Double)
+
+    override fun autentica(senha: Int): Boolean {
+        return titular.autentica(senha)
+    }
 
 
 
