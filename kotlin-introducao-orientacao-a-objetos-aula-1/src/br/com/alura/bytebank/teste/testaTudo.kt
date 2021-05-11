@@ -14,3 +14,7 @@ package br.com.alura.bytebank.teste
 //  testaSobreescritaMetodosClasseAny()
 //  testaExpressaoTryCatch()
 //  testaNullSafety()
+//  testaTamanhoDoArray()
+//  testaIteracoesSobreArray()
+//  testaComportamentoDoRange()
+//  testaCalculosDaLista()
