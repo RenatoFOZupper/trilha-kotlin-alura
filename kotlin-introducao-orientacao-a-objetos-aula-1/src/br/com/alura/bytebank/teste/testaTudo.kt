@@ -18,3 +18,6 @@ package br.com.alura.bytebank.teste
 //  testaIteracoesSobreArray()
 //  testaComportamentoDoRange()
 //  testaCalculosDaLista()
+//  testaColecao()
+//  testaCopia()
+//  testaSet()
