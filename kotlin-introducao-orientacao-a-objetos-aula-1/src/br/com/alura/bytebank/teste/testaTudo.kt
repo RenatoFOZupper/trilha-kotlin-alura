@@ -21,3 +21,6 @@ package br.com.alura.bytebank.teste
 //  testaColecao()
 //  testaCopia()
 //  testaSet()
+//  testaMap(pedidos)
+//  testaComportamentosMap()
+//  testaMapFuncoes()
