@@ -28,3 +28,7 @@ package br.com.alura.bytebank.teste
 //  testaTipoFuncaoClasse()
 //  testaFuncaoLambda()
 //  testaFuncaoAnonima()
+//  testaEscopoFuncoes()
+//  testaHOF()
+//  testaWith()
+//  testaRun()

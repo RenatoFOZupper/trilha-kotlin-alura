@@ -3,7 +3,7 @@ package br.com.alura.bytebank.modelo
 class Endereco(
     var logradouro: String = "",
     var numero: Int = 0,
-    var bairo: String = "",
+    var bairro: String = "",
     var cidade: String = "",
     var estado: String = "",
     var cep: String = "",
@@ -13,7 +13,7 @@ class Endereco(
         return """
             Endereco(logradouro='$logradouro', 
             numero=$numero, 
-            bairo='$bairo', 
+            bairo='$bairro', 
             cidade='$cidade', 
             estado='$estado', 
             cep='$cep', 
@@ -29,7 +29,7 @@ class Endereco(
 
         if (logradouro != other.logradouro) return false
         if (numero != other.numero) return false
-        if (bairo != other.bairo) return false
+        if (bairro != other.bairro) return false
         if (cidade != other.cidade) return false
         if (estado != other.estado) return false
         if (cep != other.cep) return false
@@ -41,12 +41,20 @@ class Endereco(
     override fun hashCode(): Int {
         var result = logradouro.hashCode()
         result = 31 * result + numero
-        result = 31 * result + bairo.hashCode()
+        result = 31 * result + bairro.hashCode()
         result = 31 * result + cidade.hashCode()
         result = 31 * result + estado.hashCode()
         result = 31 * result + cep.hashCode()
         result = 31 * result + complemento.hashCode()
         return result
+    }
+
+    fun completo(): String {
+        return """
+            $logradouro - $numero, $bairro, $cidade - $estado
+            $cep
+            $complemento
+        """.trimIndent()
     }
 
 

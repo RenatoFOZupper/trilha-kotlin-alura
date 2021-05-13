@@ -10,7 +10,7 @@ fun testaContasDiferentes() {
         endereco = Endereco(
             logradouro = "Rua Vergueiro",
             numero = 457,
-            bairo = "Paraiso",
+            bairro = "Paraiso",
             cep = "04118-05",
             cidade = "São Paulo",
             estado = "SP",
