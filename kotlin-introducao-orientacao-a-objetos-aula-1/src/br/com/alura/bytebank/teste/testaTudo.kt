@@ -24,3 +24,7 @@ package br.com.alura.bytebank.teste
 //  testaMap(pedidos)
 //  testaComportamentosMap()
 //  testaMapFuncoes()
+//  testaTipoFuncaoReferencia()
+//  testaTipoFuncaoClasse()
+//  testaFuncaoLambda()
+//  testaFuncaoAnonima()
